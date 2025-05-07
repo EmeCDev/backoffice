@@ -1,0 +1,20 @@
+Nueva versión ->
+
+Usuarios -> Login fallido mostrar correo de intento de usuario.
+
+Auditoria -> Agrupar por procesos similares.
+
+Carga usuario zk -> Consultar estado de envió de la carga.
+
+En todas tablas -> Paginación.
+
+Trabajar el responsive.
+
+Gestión ZK RILPEY -> Zk_Att_Acc_Ripley
+GETION ZK ARCOSDORADOS -> Zk_Att_Acc_AD
+
+Quitar HR DIGITAL DEL LOGO
+
+Enviar correo al crear un usuario
+
+- Permitir al usuario cambiar su clave.

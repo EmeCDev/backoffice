@@ -1,0 +1,6 @@
+@ZkManagementApi_HostAddress = http://localhost:5083
+
+GET {{ZkManagementApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

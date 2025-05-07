@@ -1,0 +1,331 @@
+/* users.css */
+.zk-users-container {
+    --zk-primary: #59d886;
+    --zk-secondary: #28bba8;
+    --zk-primary-dark: #45a973;
+    --zk-secondary-dark: #1f8f84;
+    --zk-border: #dee2e6;
+    --zk-bg-light: #f8f9fa;
+    --zk-text-muted: #6c757d;
+    --zk-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --zk-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+.zk-filter-section {
+    background: white;
+    border-radius: var(--zk-radius);
+    box-shadow: var(--zk-shadow);
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.zk-filter-title {
+    color: var(--zk-secondary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--zk-border);
+}
+
+.zk-filter-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.zk-filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.zk-filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--zk-secondary-dark);
+}
+
+.zk-filter-group input,
+.zk-filter-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--zk-border);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.zk-filter-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+.zk-filter-group input:focus,
+.zk-filter-group select:focus {
+    outline: none;
+    border-color: var(--zk-primary);
+    box-shadow: 0 0 0 2px rgba(89, 216, 134, 0.2);
+}
+
+.zk-filter-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.zk-btn-primary,
+.zk-btn-secondary {
+    padding: 0.3rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 120px;
+}
+
+.zk-btn-primary {
+    background: var(--zk-primary);
+    color: white;
+}
+
+.zk-btn-primary:hover:not(:disabled) {
+    background: var(--zk-primary-dark);
+}
+
+.zk-btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.zk-btn-secondary {
+    background: #f1f3f4;
+    color: var(--zk-secondary-dark);
+    border: 1px solid var(--zk-secondary);
+}
+
+.zk-btn-secondary:hover:not(:disabled) {
+    background: #e0e0e0;
+}
+
+.zk-results-section {
+    background: white;
+    border-radius: var(--zk-radius);
+    box-shadow: var(--zk-shadow);
+    width: 100%;
+}
+
+.zk-table-container {
+    overflow-x: auto;
+}
+
+.zk-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.zk-table-container thead {
+    background: var(--zk-secondary);
+}
+
+.zk-table-container th {
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.zk-table-container td {
+    padding: .2rem 1rem;
+    border-bottom: 1px solid var(--zk-border);
+}
+
+.zk-table-container tr:hover {
+    background: rgba(89, 216, 134, 0.05);
+}
+
+.zk-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.zk-no-results {
+    text-align: center;
+    padding: 1rem;
+    color: var(--zk-text-muted);
+}
+
+.zk-status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.zk-status-badge.active {
+    background: rgba(89, 216, 134, 0.2);
+    color: var(--zk-primary-dark);
+}
+
+.zk-status-badge.inactive {
+    background: rgba(244, 67, 54, 0.2);
+    color: #d32f2f;
+}
+
+.zk-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.zk-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--zk-radius);
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: var(--zk-shadow);
+}
+
+.zk-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.zk-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.zk-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.zk-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.zk-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .zk-slider {
+    background: var(--zk-primary);
+}
+
+input:checked + .zk-slider:before {
+    transform: translateX(26px);
+}
+
+.zk-switch-label {
+    margin-left: 70px;
+    line-height: 34px;
+}
+
+.zk-profile-hint {
+    display: block;
+    margin-top: 4px;
+    color: var(--zk-text-muted);
+    font-size: 0.8rem;
+}
+
+.zk-loading {
+    padding: 2rem;
+    text-align: center;
+    color: var(--zk-text-muted);
+}
+
+.zk-loading::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(89, 216, 134, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--zk-primary);
+    animation: zk-spin 1s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes zk-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .zk-filter-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .zk-filter-group {
+        min-width: 100%;
+    }
+    
+    .zk-filter-actions {
+        flex-direction: column;
+    }
+    
+    .zk-btn-primary,
+    .zk-btn-secondary {
+        width: 100%;
+    }
+    
+    .zk-modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .zk-modal-actions {
+        flex-direction: column;
+    }
+    
+    .zk-switch-label {
+        margin-left: 0;
+        display: block;
+        margin-top: 10px;
+    }
+}

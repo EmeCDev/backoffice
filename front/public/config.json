@@ -1,0 +1,5 @@
+{
+    "ZK_API_BASE_URL": "https://localhost:7113/api",
+    "USERS_API_BASE_URL": "https://localhost:7170/api",
+    "LICENSE_API_BASE_URL": "https://localhost:7255/api"
+}

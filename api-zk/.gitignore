@@ -1,0 +1,67 @@
+# Build results
+bin/
+obj/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs/
+
+# Rider
+.idea/
+*.sln.iml
+
+# dotnet watch & hot reload
+**/*.hotreload
+
+# Global tool restore cache
+.dotnet_toolstest/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# IIS Express
+.vs/
+*.vspscc
+*.vssscc
+
+# Web related
+wwwroot/dist/
+wwwroot/node_modules/
+
+# Logs
+*.log
+*.tlog
+*.pidb
+
+# Others
+*.db
+*.sqlite
+*.bak
+
+# Temporary files
+~$*
+*.tmp
+*.temp
+
+# Publish output
+publish/
+out/
+dist/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Local environment secrets
+.env
+.env.*
